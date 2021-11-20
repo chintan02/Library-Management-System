@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FacultyBookRecomendationModelStoreContainer" CdmEntityContainer="LibraryManagementSystemEntities">
+    <EntitySetMapping Name="FacultyBookRecommendations">
+      <EntityTypeMapping TypeName="FacultyBookRecomendationModel.FacultyBookRecommendation">
+        <MappingFragment StoreEntitySet="FacultyBookRecommendation">
+          <ScalarProperty Name="FacultyBookRecommnedationId" ColumnName="FacultyBookRecommnedationId" />
+          <ScalarProperty Name="FacultyId" ColumnName="FacultyId" />
+          <ScalarProperty Name="BookName" ColumnName="BookName" />
+          <ScalarProperty Name="BookDescription" ColumnName="BookDescription" />
+          <ScalarProperty Name="BookAuthor" ColumnName="BookAuthor" />
+          <ScalarProperty Name="BookPublication" ColumnName="BookPublication" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

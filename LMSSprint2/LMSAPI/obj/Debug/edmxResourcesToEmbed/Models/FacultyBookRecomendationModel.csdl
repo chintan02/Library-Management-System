@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FacultyBookRecomendationModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="FacultyBookRecommendation">
+    <Key>
+      <PropertyRef Name="FacultyBookRecommnedationId" />
+    </Key>
+    <Property Name="FacultyBookRecommnedationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FacultyId" Type="Int32" />
+    <Property Name="BookName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BookDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BookAuthor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BookPublication" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="LibraryManagementSystemEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="FacultyBookRecommendations" EntityType="Self.FacultyBookRecommendation" />
+  </EntityContainer>
+</Schema>

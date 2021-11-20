@@ -1,0 +1,107 @@
+﻿@model LMSMVC.Models.Book
+
+@{
+    ViewBag.Title = "BookRequest";
+    Layout = "~/Views/Shared/_Layoutstudent.cshtml";
+}
+<br/>
+<h2>Request ther Book from the Librarian </h2>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+<div class="form-group bg-secondary">
+    @*<h4>Book</h4>*@
+    <hr />
+    <div class="col">
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.BookName) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookName)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.BookDescription) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookDescription)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.BookAuthor) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookAuthor)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.BookPublication) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookPublication)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.BookPrice) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookPrice)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.BookStatus) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookStatus)</div>
+        </div>
+        @*<div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.DuePayment) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.DuePayment)</div>
+        </div>*@
+
+    </div>
+    @*<dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.BookName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookDescription)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookDescription)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookAuthor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookAuthor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookPublication)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookPublication)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookPrice)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookPrice)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BookStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BookStatus)
+        </dd>
+
+    </dl>*@
+    <br/>
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Request" class="btn btn-outline-dark btn-block" />
+        </div>
+    </div>
+    <br/>
+</div>
+}
+
+

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BookIssueModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="BookIssue">
+    <Key>
+      <PropertyRef Name="BookIssueId" />
+    </Key>
+    <Property Name="BookIssueId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="BookRequestId" Type="int" />
+    <Property Name="BookId" Type="int" />
+    <Property Name="StudentId" Type="int" />
+    <Property Name="LibrarianId" Type="int" />
+    <Property Name="DateOfIssue" Type="date" />
+    <Property Name="DateOfReturn" Type="date" />
+    <Property Name="DuePayment" Type="int" />
+  </EntityType>
+  <EntityContainer Name="BookIssueModelStoreContainer">
+    <EntitySet Name="BookIssue" EntityType="Self.BookIssue" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

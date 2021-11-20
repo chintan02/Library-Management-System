@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FacultyModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Faculty">
+    <Key>
+      <PropertyRef Name="FacultyId" />
+    </Key>
+    <Property Name="FacultyId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="UserName" Type="String" MaxLength="5" FixedLength="false" Unicode="false" annotation:StoreGeneratedPattern="Computed" />
+    <Property Name="FacultyName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FacultyPassword" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="FacultyImage" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="FacultyContact" Type="Int64" />
+    <Property Name="FacultyEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityContainer Name="FacultyEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Faculties" EntityType="Self.Faculty" />
+  </EntityContainer>
+</Schema>

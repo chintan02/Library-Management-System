@@ -1,0 +1,75 @@
+﻿@model IEnumerable<LMSMVC.Models.ViewStudRecomend>
+
+@{
+    ViewBag.Title = "ViewStudRecomend";
+    Layout = "~/Views/Shared/_Layoutlibrarian.cshtml";
+}
+<br />
+<h2>Books Recommend by the Students</h2>
+<hr />
+<br />
+<table id="dtBasicExample" class="table table-striped table-bordered table-sm" cellspacing="0" width="100%">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.StudentName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookDescription)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookAuthor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.BookPublication)
+            </th>
+            <th>Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.StudentName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookDescription)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookAuthor)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.BookPublication)
+                </td>
+                <td>
+                    <input style="margin:2px" type="button" class="btn btn-outline-dark" value="Delete Recommendation" onclick="location.href='@Url.Action( "DeleteStudRecomend", new { id = item.BookRecomendationId })'" />
+
+                    @*@Html.ActionLink("Delete", "DeleteStudRecomend", new { id = item.BookRecomendationId })*@
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+<br />
+<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+<link rel="stylesheet" href="~/Content/DataTables/css/jquery.dataTables.min.css" />
+
+
+
+<script src="~/Scripts/jquery-3.6.0.min.js" type="text/javascript"></script>
+<script src="~/Scripts/DataTables/dataTables.bootstrap.min.js" type="text/javascript"></script>
+<script src="~/Scripts/DataTables/jquery.dataTables.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#dtBasicExample').DataTable();
+        $('.dataTables_length').addClass('bs-select');
+    });
+</script>

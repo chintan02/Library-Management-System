@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="BookRequestModelStoreContainer" CdmEntityContainer="BookRequestEntities1">
+    <EntitySetMapping Name="BookRequests">
+      <EntityTypeMapping TypeName="BookRequestModel.BookRequest">
+        <MappingFragment StoreEntitySet="BookRequest">
+          <ScalarProperty Name="BookRequestId" ColumnName="BookRequestId" />
+          <ScalarProperty Name="RequestStatus" ColumnName="RequestStatus" />
+          <ScalarProperty Name="BookId" ColumnName="BookId" />
+          <ScalarProperty Name="StudentId" ColumnName="StudentId" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,125 @@
+﻿@model LMSMVC.Models.Book
+
+@{
+    ViewBag.Title = "BookDetails";
+    Layout = "~/Views/Shared/_Layoutlibrarian.cshtml";
+}
+<br/>
+<h2>Detais of the Book</h2>
+
+<div class="bg-secondary">
+    @*  <h4>Book</h4>*@
+    <hr />
+    <br />
+    <div class="col">
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal font-weight-bold">  @Html.DisplayNameFor(model => model.BookName) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookName)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal font-weight-bold">  @Html.DisplayNameFor(model => model.BookDescription) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookDescription)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal font-weight-bold">  @Html.DisplayNameFor(model => model.BookAuthor) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookAuthor)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal font-weight-bold">  @Html.DisplayNameFor(model => model.BookPublication) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookPublication)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal font-weight-bold">  @Html.DisplayNameFor(model => model.BookPrice) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookPrice)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal font-weight-bold">  @Html.DisplayNameFor(model => model.BookStatus) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookStatus)</div>
+        </div>
+        @*<div class="row" style="height:30px; font-size:20px">
+                <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.DuePayment) : </div>
+                <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.DuePayment)</div>
+            </div>*@
+        <br />
+    </div>
+    @*<dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.BookName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BookName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BookDescription)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BookDescription)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BookAuthor)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BookAuthor)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BookPublication)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BookPublication)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BookPrice)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BookPrice)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BookStatus)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BookStatus)
+            </dd>
+
+        </dl>*@
+    <br/>
+<div class="row">
+
+    <!--<div class="col-2" style="margin:15px">
+
+        <input type="button" class="btn btn-outline-dark" value="Return Back" onclick="location.href='@Url.Action("BookModification")'" />
+    </div><div class="col-8" style="margin:15px">
+        <input style="margin:2px" type="button" class="btn btn-outline-primary" value="Edit" onclick="location.href='@Url.Action( "BookEdit", new { id = Model.BookId })'" />-->
+        
+    @*@Html.ActionLink("Edit", "BookEdit", new { id = Model.BookId }) |
+            @Html.ActionLink("Back to List", "BookModification")*@
+
+    <!--</div>-->
+
+
+    
+        <div class="col-md-10">
+            <input  type="button" class="btn btn-outline-primary btn-block" value="Edit" onclick="location.href='@Url.Action( "BookEdit", new { id = Model.BookId })'" />
+
+        </div>
+        <div>
+            <input  type="button" class="btn btn-outline-dark btn-block" value="Return Back" onclick="location.href='@Url.Action("BookModification")'" />
+        </div>
+
+  
+</div><br />
+    <hr />
+</div>
+
+
+<br/>

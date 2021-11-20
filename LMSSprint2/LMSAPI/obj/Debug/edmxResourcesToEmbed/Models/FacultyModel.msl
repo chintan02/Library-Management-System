@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="FacultyModelStoreContainer" CdmEntityContainer="FacultyEntities">
+    <EntitySetMapping Name="Faculties">
+      <EntityTypeMapping TypeName="FacultyModel.Faculty">
+        <MappingFragment StoreEntitySet="Faculty">
+          <ScalarProperty Name="FacultyId" ColumnName="FacultyId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="FacultyName" ColumnName="FacultyName" />
+          <ScalarProperty Name="FacultyPassword" ColumnName="FacultyPassword" />
+          <ScalarProperty Name="FacultyImage" ColumnName="FacultyImage" />
+          <ScalarProperty Name="FacultyContact" ColumnName="FacultyContact" />
+          <ScalarProperty Name="FacultyEmail" ColumnName="FacultyEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

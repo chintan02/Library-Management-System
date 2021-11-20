@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap-lumen.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <link rel="icon" type="image/x-icon" href="@Url.Content("~/Images/Libraryicon.png")">
+
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+</head>
+
+
+
+<body>
+
+    <script src="~/Scripts/jquery-3.6.0.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <div class="navbar navbar-inverse navbar-fixed-top navbar-dark " style="height:80px;background-color:lightslategray">
+        @*<div class="navbar navbar-inverse navbar-fixed-top navbar-dark bg-primary">*@
+            <div class="container">
+
+                <div class="navbar-header">
+
+                    @Html.ActionLink("Home", "FacultyHome", new { FacultyId = Session["FacultyId"] }, new { @class = "navbar-brand" })
+                    @Html.ActionLink("Book Recommendation", "FacultyBookRecommendation", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="nav navbar-nav navbar-right">
+                    <img src="@Url.Action("UserPhotos", "Faculty" )" class="rounded-circle" height="48" width="48" />
+                </div>
+                <div class="nav navbar-nav navbar-right navbar-brand">
+                    Welcome @Session["FacultyName"]
+                </div>
+                <div class="nav navbar-nav navbar-right">
+                    @Html.ActionLink("Logout", "Logout", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+            </div>
+            @*<div class="nav navbar-nav navbar-right">
+                    @Html.ActionLink("Logout", "Logout", new { area = "" }, new { @class = "navbar-brand" })
+                </div>*@
+
+        </div>
+
+
+        <div class="container col-lg-auto  body-content bg-light">
+            @RenderBody()
+            @*<hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year -Library Management System Team 3</p>
+                </footer>*@
+        </div>
+        @*<br />*@
+
+        <div class="footer">
+            @*<hr />*@
+            <p>&copy; @DateTime.Now.Year -Library Management System Team 3</p>
+        </div>
+        <style>
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: dimgrey;
+                color: oldlace;
+                text-align: center;
+            }
+        </style>
+        @*<style>
+            .footer {
+                position: fixed;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                background-color: oldlace;
+                color: dimgrey;
+                text-align: center;
+            }
+        </style>*@
+        @*@Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")*@
+        @RenderSection("scripts", required: false)
+
+        <script type="text/javascript">
+            window.onload = window.history.forward(0);  //calling function on window onload
+
+        </script>
+
+
+</body>
+</html>

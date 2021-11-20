@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BookIssueModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="BookIssue">
+    <Key>
+      <PropertyRef Name="BookIssueId" />
+    </Key>
+    <Property Name="BookIssueId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="BookRequestId" Type="Int32" />
+    <Property Name="BookId" Type="Int32" />
+    <Property Name="StudentId" Type="Int32" />
+    <Property Name="LibrarianId" Type="Int32" />
+    <Property Name="DateOfIssue" Type="DateTime" Precision="0" />
+    <Property Name="DateOfReturn" Type="DateTime" Precision="0" />
+    <Property Name="DuePayment" Type="Int32" />
+  </EntityType>
+  <EntityContainer Name="BookIssueEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="BookIssues" EntityType="Self.BookIssue" />
+  </EntityContainer>
+</Schema>

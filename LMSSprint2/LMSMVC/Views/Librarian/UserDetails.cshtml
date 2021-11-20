@@ -1,0 +1,121 @@
+﻿@model LMSMVC.Models.Student
+
+@{
+    ViewBag.Title = "UserDetails";
+    Layout = "~/Views/Shared/_Layoutlibrarian.cshtml";
+}
+<br />
+<h2>Details of User</h2>
+
+<div class="bg-light">
+    @*<h4>Student</h4>*@
+    <hr />
+    <br />
+    <div class="col">
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal font-weight-bold">  @Html.DisplayNameFor(model => model.StudentName) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.StudentName)</div>
+        </div>
+        @*<div class="row" style="height:30px; font-size:20px">
+                <div class="col-2 font-weight-normal font-weight-bold">  @Html.DisplayNameFor(model => model.StudentPassword) : </div>
+                <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.StudentPassword)</div>
+            </div>*@
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal font-weight-bold">  @Html.DisplayNameFor(model => model.StudentContact) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.StudentContact)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal font-weight-bold">  @Html.DisplayNameFor(model => model.StudentEmail) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.StudentEmail)</div>
+        </div>
+        @*<div class="row" style="height:30px; font-size:20px">
+                <div class="col-2 font-weight-normal font-weight-bold">  @Html.DisplayNameFor(model => model.BookPrice) : </div>
+                <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookPrice)</div>
+            </div>
+            <div class="row" style="height:30px; font-size:20px">
+                <div class="col-2 font-weight-normal font-weight-bold">  @Html.DisplayNameFor(model => model.BookStatus) : </div>
+                <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookStatus)</div>
+            </div>*@
+        @*<div class="row" style="height:30px; font-size:20px">
+                <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.DuePayment) : </div>
+                <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.DuePayment)</div>
+            </div>*@
+        <br />
+    </div>
+    @*<dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.StudentName)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.StudentName)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.StudentPassword)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.StudentPassword)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.StudentConfirmPassword)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.StudentConfirmPassword)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.StudentContact)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.StudentContact)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.StudentEmail)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.StudentEmail)
+            </dd>
+
+        </dl>*@
+
+    @*<p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.StudentId }) |
+        @Html.ActionLink("Back to List", "UserModification")
+    </p>*@
+
+<div class="row">
+
+    @*<div class="col-2" style="margin:15px">
+
+        <input type="button" class="btn btn-outline-dark" value="Return Back" onclick="location.href='@Url.Action("UserModification")'" />
+    </div>
+    <div class="col-8" style="margin:15px">
+        <input style="margin:2px" type="button" class="btn btn-outline-primary" value="Edit" onclick="location.href='@Url.Action( "UserEdit", new { id = Model.StudentId })'" />
+
+    </div>*@
+
+
+
+    <div class="col-md-10">
+        <input style="margin:2px" type="button" class="btn btn-outline-primary btn-block" value="Edit Details" onclick="location.href='@Url.Action( "UserEdit", new { id = Model.StudentId })'" />
+
+    </div>
+    <div>
+        <input type="button" class="btn btn-outline-dark btn-block" value="Return Back" onclick="location.href='@Url.Action("UserModification")'" />
+    </div>
+
+</div>
+    <br />
+    <hr />
+</div>
+
+
+
+<br />

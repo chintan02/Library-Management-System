@@ -1,0 +1,94 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+<br />
+@*<div class="row bg-secondary">*@
+
+<div class=" row d-flex justify-content-center font-weight-bold">Select your type</div>
+<hr />
+@*<br />*@
+@*</div>*@
+@*<div class="form-check col-sm-4 bg-light px-md-5 d-inline justify-content-start" style="padding:20px" onclick="@("window.location.href='" + @Url.Action("Index", "Student") + "'");">
+
+        <div class="rounded mx-auto d-block">
+            <img src="~/Images/student_grad.jpg" class="rounded mx-auto d-block" height="200" width="200" />
+        </div>
+        <br />
+        <br />
+        <div class="mx-auto text-center">
+            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked="">
+            Student
+        </div>
+
+    </div>*@
+@*<div class="form-check col-sm-4 bg-light  px-md-5 d-inline justify-content-center" style="padding:20px" onclick="@("window.location.href='" + @Url.Action("Index", "Faculty") + "'");">
+
+
+        <div class="img-responsive center-block">
+            <img src="~/Images/facul_grad.jpg" class="rounded mx-auto d-block" height="200" width="200" />
+        </div>
+        <br />
+        <br />
+        <div class="mx-auto text-center">
+            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+            Faculty
+        </div>
+
+    </div>*@
+@*<div class="form-check col-sm-4 bg-light px-md-5 d-inline justify-content-end" style="padding:20px" onclick="@("window.location.href='" + @Url.Action("Index", "Librarian") + "'");">
+
+        <div class="img-responsive center-block">
+            <img src="~/Images/librarian_new.jpg" class="rounded mx-auto d-block" height="200" width="200" />
+        </div>
+        <br />
+        <br />
+        <div class="mx-auto text-center">
+
+            <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="option3">
+            Librarian
+        </div>
+
+    </div>*@
+<div class="row ">
+    <div class="card  col-sm text-white bg-dark " style="margin:10px" onclick="@("window.location.href='" + @Url.Action("Index", "Student") + "'");">
+        <div class="card-header"> Student</div>
+        <div class="card-body">
+            <img src="~/Images/student_grad.jpg" class="rounded mx-auto d-block" height="200" width="200" />
+        </div>
+    </div>
+
+    <div class="card  col-sm text-white bg-dark " style="margin:10px" onclick="@("window.location.href='" + @Url.Action("Index", "Faculty") + "'");">
+        <div class="card-header"> Faculty</div>
+        <div class="card-body">
+            <img src="~/Images/facul_grad.jpg" class="rounded mx-auto d-block" height="200" width="200" />
+        </div>
+    </div>
+
+
+
+    <div class="card col-sm text-white bg-dark " style="margin:10px" onclick="@("window.location.href='" + @Url.Action("Index", "Librarian") + "'");">
+        <div class="card-header"> Librarian</div>
+        <div class="card-body">
+            <img src="~/Images/librarian_new.jpg" class="rounded mx-auto d-block" height="200" width="200" />
+        </div>
+    </div>
+</div>
+
+
+
+<br />
+@*<br />*@
+
+
+
+<div class="row d-flex justify-content-center">
+    <input type="button" class="btn btn-outline-dark" value="Return Back" onclick="location.href='@Url.Action("Index")'" />
+
+    @*<h3>@Html.ActionLink("Back", "Index")</h3>*@
+</div>
+
+
+
+<br/>
+<br/>

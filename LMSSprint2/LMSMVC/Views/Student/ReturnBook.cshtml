@@ -1,0 +1,116 @@
+﻿@model LMSMVC.Models.BookIssue
+
+@{
+    ViewBag.Title = "ReturnBook";
+    Layout = "~/Views/Shared/_Layoutstudent.cshtml";
+}
+
+<br />
+@*<h2>ReturnBook</h2>*@
+<br />
+<h3>Are you sure you want to Return this?</h3>
+
+<div class="bg-secondary">
+    @*<h4>BookIssue</h4>*@
+    <hr />
+    <div class="col">
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.BookRequestId) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookRequestId)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.BookId) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.BookId)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.StudentId) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.StudentId)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.LibrarianId) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.LibrarianId)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.DateOfIssue) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.DateOfIssue)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.DateOfReturn) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.DateOfReturn)</div>
+        </div>
+        <div class="row" style="height:30px; font-size:20px">
+            <div class="col-2 font-weight-normal">  @Html.DisplayNameFor(model => model.DuePayment) : </div>
+            <div class="col-10 font-weight-normal">   @Html.DisplayFor(model => model.DuePayment)</div>
+        </div>
+
+    </div>
+    @*<dl class="dl-horizontal">
+            <dt>
+
+            </dt>
+
+            <dd>
+
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.BookId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.BookId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.StudentId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.StudentId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.LibrarianId)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.LibrarianId)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfIssue)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateOfIssue)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DateOfReturn)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DateOfReturn)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.DuePayment)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.DuePayment)
+            </dd>
+
+        </dl>*@
+    <br />
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions col-md-offset-2 col-md-10">
+            <input type="submit" value="Return" class="btn btn-outline-dark btn-block" />
+        </div>
+    }
+    <br />
+</div>

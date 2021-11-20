@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="LibrarianModelStoreContainer" CdmEntityContainer="LibrarianEntities">
+    <EntitySetMapping Name="Librarians">
+      <EntityTypeMapping TypeName="LibrarianModel.Librarian">
+        <MappingFragment StoreEntitySet="Librarian">
+          <ScalarProperty Name="LibrarianId" ColumnName="LibrarianId" />
+          <ScalarProperty Name="UserName" ColumnName="UserName" />
+          <ScalarProperty Name="LibrarianName" ColumnName="LibrarianName" />
+          <ScalarProperty Name="LibrarianPassword" ColumnName="LibrarianPassword" />
+          <ScalarProperty Name="LibrarianImage" ColumnName="LibrarianImage" />
+          <ScalarProperty Name="LibrarianContact" ColumnName="LibrarianContact" />
+          <ScalarProperty Name="LibrarianEmail" ColumnName="LibrarianEmail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
